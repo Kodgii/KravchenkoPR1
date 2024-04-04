@@ -12,7 +12,7 @@ namespace WinFormsApp1
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
-            
+
         }
 
         private void txtA_TextChanged(object sender, EventArgs e)
@@ -92,6 +92,15 @@ namespace WinFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            
+            
+                this.linkLabel1.LinkVisited = true;
+                System.Diagnostics.Process.Start(new ProcessStartInfo("cmd", $"/c start https://github.com/Kodgii"));
+         
         }
     }
 }

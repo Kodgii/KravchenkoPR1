@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Reflection.Metadata;
@@ -52,8 +53,8 @@ namespace WinFormsApp1
             {
                 MessageBox.Show("Спасибо что воспользовались данной программой.РАБОТУ ВЫПОЛНИЛА СТРЕЛЬЦОВА А.А");
             }
-          
-            
+
+
         }
 
         private void Nav5_Click(object sender, EventArgs e)
@@ -103,6 +104,12 @@ namespace WinFormsApp1
         private void txtA_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.linkLabel1.LinkVisited = true;
+            System.Diagnostics.Process.Start(new ProcessStartInfo("cmd", $"/c start https://github.com/Kodgii"));
         }
     }
 }

@@ -45,6 +45,7 @@
             Nav5 = new Button();
             label5 = new Label();
             errorProvider1 = new ErrorProvider(components);
+            linkLabel1 = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)errorProvider1).BeginInit();
             SuspendLayout();
             // 
@@ -215,12 +216,24 @@
             // 
             errorProvider1.ContainerControl = this;
             // 
+            // linkLabel1
+            // 
+            linkLabel1.AutoSize = true;
+            linkLabel1.Location = new Point(341, 399);
+            linkLabel1.Name = "linkLabel1";
+            linkLabel1.Size = new Size(82, 15);
+            linkLabel1.TabIndex = 46;
+            linkLabel1.TabStop = true;
+            linkLabel1.Text = "Ссылка на git";
+            linkLabel1.LinkClicked += linkLabel1_LinkClicked;
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.LavenderBlush;
             ClientSize = new Size(800, 450);
+            Controls.Add(linkLabel1);
             Controls.Add(label5);
             Controls.Add(Nav5);
             Controls.Add(Nav4);
@@ -262,5 +275,6 @@
         private Button Nav5;
         private Label label5;
         private ErrorProvider errorProvider1;
+        private LinkLabel linkLabel1;
     }
 }

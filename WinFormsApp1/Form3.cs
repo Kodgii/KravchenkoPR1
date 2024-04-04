@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -56,13 +57,13 @@ namespace WinFormsApp1
                 txtSumma.Text = s.ToString();
                 errorProvider1.SetError(txtA, "");
                 errorProvider1.SetError(txtB, "");
-                
+
             }
             catch
             {
                 errorProvider1.SetError(txtA, "Неправильно введено значение");
                 errorProvider1.SetError(txtB, "Неправильно введено значение");
-                
+
             }
             if (txtSumma.Text == "")
             {
@@ -72,7 +73,7 @@ namespace WinFormsApp1
             {
                 MessageBox.Show("Спасибо что воспользовались данной программой.РАБОТУ ВЫПОЛНИЛА СТРЕЛЬЦОВА А.А");
             }
-            
+
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -93,6 +94,12 @@ namespace WinFormsApp1
         private void txtSumma_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.linkLabel1.LinkVisited = true;
+            System.Diagnostics.Process.Start(new ProcessStartInfo("cmd", $"/c start https://github.com/Kodgii"));
         }
     }
 }
